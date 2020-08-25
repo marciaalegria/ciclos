@@ -18,17 +18,30 @@ var name = document.getElementById("name");
 var result = document.getElementById("result");
 
 // pedir numero de 1 a 100 y mostrar desde el uno hasta numero seleccionado
+//. Solicitar al usuario un número entre 1 al 100. Luego, se deberá imprimir por consola los números
+//desde el 0 hasta el número que ingresó el usuario.
 uno.onclick = function(e){
- alert("estamos trabajando para tiiiii");
+ valorNumero = prompt("ingresa un numero de 1 a 100");
+ if (isNaN(valorNumero)) {
+     alert("no es un número válido");
+ } else if(valorNumero > 100 || valorNumero < 0){
+     alert("debe ser un numero entre 1 y 100");
+ } else{
+     for ( i = 1; i <= valorNumero ; i++) {
+         console.log(i);
+         
+     }
+ }
+
 }
 
 // respuesta esperada blanco si no volver a preguntar
 dos.onclick = function(e){
-    alert("en proceso");
+    prompt("¿de qué color es el caballo blanco de napoleón?");
 }
 // pedir notas y promediar matematicas ciencias fisica
 tres.onclick = function(e){
-    alert("en proceso");
+    prompt("en proceso");
 }
 //pedir 3 frutas de manera individual e imprimir todas juntas excepto "manzana"
 cuatro.onclick = function(e){
