@@ -37,11 +37,25 @@ uno.onclick = function(e){
 
 // respuesta esperada blanco si no volver a preguntar
 dos.onclick = function(e){
-    prompt("¿de qué color es el caballo blanco de napoleón?");
+
+    do {
+        var respuesta= prompt("¿De qué color es el caballo blanco de napoleón?")
+        } while (respuesta.toLowerCase() !="blanco");
+
 }
+
 // pedir notas y promediar matematicas ciencias fisica
 tres.onclick = function(e){
-    prompt("en proceso");
+    valor_1 = prompt("ingresa promedio ciencias");
+    valor_2 = prompt("ingresa promedio fisica");
+    valor_3 = prompt("ingresa promedio matematicas");
+    nota1= parseInt(valor_1);
+    nota2= parseInt(valor_2);
+    nota3 = parseInt(valor_3);
+
+    prom = nota1 + nota2 + nota3;
+    final = prom / 3;
+    console.log(final);
 }
 //pedir 3 frutas de manera individual e imprimir todas juntas excepto "manzana"
 cuatro.onclick = function(e){
