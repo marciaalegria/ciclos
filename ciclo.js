@@ -57,13 +57,48 @@ tres.onclick = function(e){
     final = prom / 3;
     console.log(final);
 }
-//pedir 3 frutas de manera individual e imprimir todas juntas excepto "manzana"
+//pedir 3 frutas de manera individual e imprimir todas juntas por consola excepto "manzana"
 cuatro.onclick = function(e){
-    alert("en proceso");
+    let frutas = [];
+    var fruta_1= prompt("menciona una fruta");
+    if (fruta_1 == "manzana") {
+        fruta_1 ="";
+    } else {
+        frutas.push(fruta_1);
+    }
+     
+    fruta_2= prompt("ingresa una segunda fruta");
+    if (fruta_2 == "manzana") {
+        fruta_2 ="";
+    } else {
+        frutas.push(fruta_2);
+    }
+    
+    fruta_3= prompt("ingresa una tercera fruta");
+    if (fruta_3 == "manzana") {
+        fruta_3 ="";
+    } else {
+        frutas.push(fruta_3);
+    }
+      console.log(frutas);
+
 }
 //pedir nombre y separar vocales de consonantes y mostrar con un alert este resultado
 cinco.onclick = function(e){
-    alert("en proceso");
+    let nombre = prompt("ingresa tu primer nombre");
+    let vocales = [];
+    let consonantes = [];
+    
+
+    for(i of nombre){
+        if ( i == "a" || i == "e" || i == "i" || i =="o" || i =="u"){
+            vocales.push(i);
+        } else {
+            consonantes.push(i);
+        }
+    }
+   alert("tu nombre tiene " + vocales.length + " vocales y " + consonantes.length + " consonantes" )
+
 }
 
 seis.onclick = function(e){
